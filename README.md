@@ -1,6 +1,11 @@
 
 ## R-devel SAN using Clang: R development binaries with Sanitizer support
 
+This fork adds 
+- `build-essential` and
+- `cmake`
+to the Dockerfile.
+
 The [Writing R Extensions manual](http://cran.r-project.org/doc/manuals/r-devel/R-exts.html)
 details in [Section 4.3](http://cran.r-project.org/doc/manuals/r-devel/R-exts.html#Checking-memory-access)
 how to check memory access.  Two sections are devoted to

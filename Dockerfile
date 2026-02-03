@@ -72,6 +72,8 @@ RUN apt update -qq \
 		xfonts-base \
 		xvfb \
 		zlib1g-dev \
+		build-essential \
+		cmake \
 	&& rm -rf /var/lib/apt/lists/*
 
 ## Add symlink and check out R-devel

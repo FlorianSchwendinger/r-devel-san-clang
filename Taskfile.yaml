@@ -1,0 +1,17 @@
+version: '3'
+
+tasks:
+  pull:
+    desc: Pull the base r-base image
+    cmds:
+      - podman pull docker.io/r-base:latest
+
+  build:
+    desc: Build the Docker image
+    cmds:
+      - podman build --tag r-devel-san-clang -f ./Dockerfile .
+
+  run:
+    desc: Run the Docker image
+    cmds:
+      - podman run --rm -it --cap-add SYS_PTRACE localhost/r-devel-san-clang:latest bash
